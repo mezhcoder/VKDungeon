@@ -8,7 +8,7 @@ require_once("api/Controller.php");
 
 $controller = new Controller();
 $controller->loadDungeon("files/settings.json");
-$controller->movedToRoom(1);
+$controller->movedToRoom(5);
 ```
 
 <h2>Основные методы API<h2>
