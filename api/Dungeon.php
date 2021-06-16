@@ -3,10 +3,10 @@
 function includeFiles($dir) {
     $catalog = opendir($dir);
 
-    while ($filename = readdir($catalog )) { // перебираем наш каталог {
-        $filename = $dir."/".$filename;
+    while ($filename = readdir($catalog )) {
+        $filename = $dir . "/". $filename;
         if (!is_dir($filename)) {
-            include_once($filename); // один раз подрубаем, чтоб не повторяться
+            include_once($filename);
         }
     }
     closedir($catalog);
