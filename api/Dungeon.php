@@ -1,15 +1,15 @@
 <?php
 
 function includeFiles($dir) {
-    $catalog = opendir($dir);
+    $cat = opendir($dir);
 
-    while ($filename = readdir($catalog )) {
+    while ($filename = readdir($cat)) {
         $filename = $dir . "/". $filename;
         if (!is_dir($filename)) {
             include_once($filename);
         }
     }
-    closedir($catalog);
+    closedir($cat);
 }
 
 require_once("Map.php");
@@ -38,7 +38,7 @@ function createRoom($numberRoom, $json) {
         }
     }
 
-    //add bosses  //spawnRooms
+    //add bosses
     foreach ($json["bosses"] as $key => $value) {
         if (in_array($numberRoom, $value["spawnRooms"])) {
             switch ($key) {
@@ -97,7 +97,6 @@ class Dungeon {
     }
 
     function availableMovedRooms(Player $player) {
-
         return $this->aisleRooms[$player->getCurrentRoom()->uniqueNumber()];
     }
 
@@ -111,7 +110,6 @@ class Dungeon {
                 return true;
             }
         }
-
         return false;
     }
 
