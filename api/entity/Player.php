@@ -21,8 +21,8 @@ class Player {
         if ($dungeon->getEndRoom()->uniqueNumber() == $this->positionRoom->uniqueNumber()) {
             echo("[Room " . $this->positionRoom->uniqueNumber() . "] Поздравляем! Игрок нашёл выход!\n");
             echo("[Dungeon] Прохождение закончено. Итоговые очки игрока: " . $this->score . "\n");
+            exit(0);
         }
-        exit(0);
     }
 
     public function isMovedToRoom(int $numberRoom, Dungeon $dungeon) {
