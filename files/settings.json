@@ -1,0 +1,60 @@
+{
+  "map": [
+    "1 2 3 4",
+    "5 6 7 8" ,
+    "9 10 11 12"
+  ],
+  "edges": {
+    "1": [2,5],
+    "2": [1,6],
+    "3": [4],
+    "4": [3],
+    "5": [1,6,9],
+    "6": [5,2,7,10],
+    "7": [6,11,8],
+    "8": [7],
+    "9": [5],
+    "10": [6],
+    "11": [7,12],
+    "12": [11]
+  },
+  "bosses": {
+    "EasyBoss": {
+      "startDamage": 10,
+      "lossDamage": 1,
+      "rewardScore": 15,
+      "spawnRooms": [6, 11]
+    },
+    "MiddleBoss": {
+      "startDamage": 50,
+      "lossDamage": 2,
+      "rewardScore": 30,
+      "spawnRooms": [3]
+    },
+    "HardBoss": {
+      "startDamage": 100,
+      "lossDamage": 3,
+      "rewardScore": 50,
+      "spawnRooms": [4]
+    }
+  },
+  "chests": {
+    "WoodChest": {
+      "min_score": 1,
+      "max_score": 10,
+      "spawnRooms": [5]
+    },
+    "IronChest": {
+      "min_score": 10,
+      "max_score": 15,
+      "spawnRooms": [8]
+    },
+    "GoldChest": {
+      "min_score": 15,
+      "max_score": 30,
+      "spawnRooms": [9]
+    }
+  },
+  "startRoom": 1,
+  "endRoom": 5
+}
