@@ -1,8 +1,6 @@
 <?php
 require_once("Dungeon.php");
 
-
-
 class Controller {
     public Dungeon $dungeon;
     public Player $player;

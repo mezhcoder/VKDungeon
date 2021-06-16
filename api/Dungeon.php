@@ -1,18 +1,21 @@
 <?php
 
+function includeFiles($dir) {
+    $catalog = opendir($dir);
+
+    while ($filename = readdir($catalog )) { // перебираем наш каталог {
+        $filename = $dir."/".$filename;
+        if (!is_dir($filename)) {
+            include_once($filename); // один раз подрубаем, чтоб не повторяться
+        }
+    }
+    closedir($catalog);
+}
+
 require_once("Map.php");
 require_once("Room.php");
-require_once("entity/Player.php");
-require_once("entity/Boss.php");
-require_once("entity/EasyBoss.php");
-require_once("entity/MiddleBoss.php");
-require_once("entity/HardBoss.php");
-
-require_once("items/WoodChest.php");
-require_once("items/IronChest.php");
-require_once("items/GoldChest.php");
-require_once("items/Chest.php");
-
+includeFiles("api/entity/");
+includeFiles("api/items/");
 
 function createRoom($numberRoom, $json) {
     $chests = [];

@@ -1,4 +1,5 @@
 <?php
+
 abstract class Chest {
     private string $name;
     private int $min_score;

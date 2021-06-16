@@ -1,5 +1,6 @@
 <?php
 require_once("Chest.php");
+
 class GoldChest extends Chest {
     function execute(Player $player) {
         $min_score = $this->getMinScore();
