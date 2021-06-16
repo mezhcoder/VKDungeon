@@ -13,4 +13,6 @@ $controller->movedToRoom(1);
 
 <h2>Основные методы API<h2>
 <i>loadDungeon(path_settingsFile)</i> - загрузка подземелья</br>
-<i>movedToRoom(numberRoom)</i> - переместить персонажа в определенную комнату
+<i>movedToRoom(numberRoom)</i> - переместить персонажа в определенную комнату</br>
+</br>
+Для работы с библиотекой необходима версия PHP 7.4 или выше
