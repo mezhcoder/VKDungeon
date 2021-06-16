@@ -2,8 +2,8 @@
 require_once("Dungeon.php");
 
 class Controller {
-    public Dungeon $dungeon;
-    public Player $player;
+    private Dungeon $dungeon;
+    private Player $player;
 
     public function __construct() {
         $this->dungeon = new Dungeon();

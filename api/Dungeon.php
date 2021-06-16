@@ -74,7 +74,7 @@ class Dungeon {
     private Room $startRoom;
     private Room $endRoom;
 
-    public array $aisleRooms = array();
+    private array $aisleRooms = array();
 
     function loadMap($json_settingsFile) {
         $json = json_decode($json_settingsFile, true);;

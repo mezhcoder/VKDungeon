@@ -2,7 +2,7 @@
 
 class Room {
     private int $uniqueNumber;
-    public $chests;
+    private $chests;
     private $bosses;
 
     public function __construct($uniqueNumber, $chests, $bosses) {
