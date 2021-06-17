@@ -1,18 +1,22 @@
 <h1>VKDungeon</h1>
 
-<h2>Пример пользования API<h2>
+<h2>Пример использования API через комадную строку<h2>
 
 
-```php
-require_once("api/Controller.php");
+```bash
+Запуск скрипта: 
+php DungeonAPI.php
 
-$controller = new Controller();
-$controller->loadDungeon("files/settings.json");
-$controller->movedToRoom(5);
+Загрузить подземелье
+dungeon load files/settings.josn
+
+Переместить игрока в комнату
+move 2
 ```
 
 <h2>Основные методы API<h2>
-<i>loadDungeon(path_settingsFile)</i> - загрузка подземелья</br>
-<i>movedToRoom(numberRoom)</i> - переместить персонажа в определенную комнату</br>
+<i>loadDungeon path_settingsFile</i> - загрузка подземелья</br>
+<i>move numberRoom</i> - переместить персонажа в определенную комнату</br>
+<i>availableRooms</i> - доступные комнаты, к которым можно пройти</br>
 </br>
 Для работы с библиотекой необходима версия PHP 7.4 или выше
